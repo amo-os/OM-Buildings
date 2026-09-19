@@ -43,16 +43,19 @@ class Settings(BaseSettings):
     ASSISTANT_MODEL: str = os.getenv("ASSISTANT_MODEL", "claude-haiku-4-5-20251001")
     
     CORS_ORIGINS: List[str] = [
-        "https://om-buildings.vercel.app",
-        "https://om-buildings-rust.vercel.app",
-        "http://localhost:8000",
-        "http://127.0.0.1:8000",
-        "http://localhost:8080",
-        "http://127.0.0.1:8080",
-        "http://localhost:3000",
-        "http://localhost:5500",
-        "http://127.0.0.1:5500",
-    ]
+      
+    "https://omconstructionsenggconsultants.in",
+    "https://www.omconstructionsenggconsultants.in",
+    "https://om-buildings.vercel.app",
+    "https://om-buildings-rust.vercel.app",
+    "http://localhost:8000",
+    "http://127.0.0.1:8000",
+    "http://localhost:3000",
+    "http://localhost:5500",
+    "http://127.0.0.1:5500",
+]
+
+    
 
     class Config:
         env_file = (os.path.join(BACKEND_DIR, ".env"), ".env")
